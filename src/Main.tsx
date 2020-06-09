@@ -3,12 +3,13 @@ import { NavigationContainer } from '@react-navigation/native';
 import {StatusBar} from 'react-native';
 import BottomTabNavigator from 'navigators/BottomTabNavigator';
 import UIProvider from 'components/UIProvider';
+import RNTheme from 'constants/rn.theme';
 
 const App = () => {
   return (
     <UIProvider>
       <StatusBar barStyle="dark-content" />
-      <NavigationContainer>
+      <NavigationContainer theme={RNTheme}>
         <BottomTabNavigator/>
       </NavigationContainer>
     </UIProvider>
