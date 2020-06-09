@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-} from 'react-native';
-import { Button } from '@ant-design/react-native';
+import { StyleSheet } from 'react-native';
+import { View } from 'components/View';
+import { Text } from 'components/Text';
+import { Button } from 'components/Button';
 
 interface HomeScreenProps {
 

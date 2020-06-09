@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from '@ant-design/react-native';
-import theme from './ant-design/theme';
-import esES from './ant-design/es_locale';
+import theme from 'constants/ant.theme';
+import esES from 'constants/ant.locale.es';
 
 
 
