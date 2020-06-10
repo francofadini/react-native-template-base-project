@@ -1,15 +1,15 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import SettingsScreen from 'screens/SettingsScreen';
+import { ExampleScreen } from 'screens/ExampleScreen';
 
 const Stack = createStackNavigator();
 
-function SettingsStackNavigator() {
+function AccountStackNavigator() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Settings" component={SettingsScreen} />
+      <Stack.Screen name="Account" component={ExampleScreen} />
     </Stack.Navigator>
   );
 }
 
-export default SettingsStackNavigator;
+export default AccountStackNavigator;

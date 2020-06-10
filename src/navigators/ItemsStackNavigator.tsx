@@ -1,15 +1,15 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from 'screens/HomeScreen';
+import { ExampleScreen } from 'screens/ExampleScreen';
 
 const Stack = createStackNavigator();
 
-function HomeStackNavigator() {
+function ItemsStackNavigator() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen name="Items" component={ExampleScreen} />
     </Stack.Navigator>
   );
 }
 
-export default HomeStackNavigator;
+export default ItemsStackNavigator;

@@ -22,6 +22,12 @@ const strings = new LocalizedStrings({
       title: "Pantalla Ejemplo",
       counterLabel: "Contador",
       upButtonLabel: "Agregar"
+    },
+    itemsScreen: {
+      title: "Items"
+    },
+    accountScreen: {
+      title: "Mi Cuenta"
     }
   }
 })

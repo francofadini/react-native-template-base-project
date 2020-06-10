@@ -1,9 +1,10 @@
 import 'react-native-gesture-handler';
 import React from 'react';
 import { createBottomTabNavigator, BottomTabNavigationOptions } from '@react-navigation/bottom-tabs';
-import HomeStackNavigator from 'navigators/HomeStackNavigator';
-import SettingsStackNavigator from 'navigators/SettingsStackNavigator';
+import ItemsStackNavigator from 'navigators/ItemsStackNavigator';
+import AccountStackNavigator from 'navigators/AccountStackNavigator';
 import { Icon, IconNames } from 'components/Icon';
+import strings from 'constants/strings';
 
 const Tab = createBottomTabNavigator();
 
@@ -15,20 +16,20 @@ const BottomNavigationOptions: (routeName: string) => BottomTabNavigationOptions
 })
 
 const ScreenIcons: { [key: string]: IconNames } = {
-  "Home": "home",
-  "Settings": "setting"
+  "Items": "tag",
+  "Account": "user"
 }
 
 const ScreenTitles: { [key: string]: string } = {
-  "Home": "Home",
-  "Settings": "Configuraciones"
+  "Items": strings.itemsScreen.title,
+  "Account": strings.accountScreen.title
 }
 
 const BottomTabNavigator = () => {
   return (
     <Tab.Navigator screenOptions={({route})=> BottomNavigationOptions(route.name)}>
-      <Tab.Screen name="Home" component={HomeStackNavigator} />
-      <Tab.Screen name="Settings" component={SettingsStackNavigator} />
+      <Tab.Screen name="Items" component={ItemsStackNavigator} />
+      <Tab.Screen name="Account" component={AccountStackNavigator} />
     </Tab.Navigator>
   );
 };
