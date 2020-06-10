@@ -3,6 +3,7 @@ import { StyleSheet } from 'react-native';
 import { View } from 'components/View';
 import { Text } from 'components/Text';
 import { Button } from 'components/Button';
+import strings from 'constants/strings';
 
 interface ExampleScreenProps {
 
@@ -42,13 +43,13 @@ export const ExampleScreen: React.FC<ExampleScreenProps> = (props) => {
   // Component Render
   return (
     <View style={styles.root}>
-      <Text>Example Screen</Text>
-      <Text>Counter: {count}</Text>
+      <Text>{strings.exampleScreen.title}</Text>
+      <Text>{strings.exampleScreen.counterLabel} : {count}</Text>
       <Button
-        style={styles.button}
-        type={'primary'} 
-        onPress={increaseCount}>
-        UP!
+      style={styles.button}
+      type={'primary'} 
+      onPress={increaseCount}>
+        {strings.exampleScreen.upButtonLabel} !
       </Button>
     </View>
   );
