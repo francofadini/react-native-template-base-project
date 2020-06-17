@@ -1,13 +1,13 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import { ExampleScreen } from 'screens/ExampleScreen';
+import { PostsScreen } from 'screens/posts/PostsScreen';
 
 const Stack = createStackNavigator();
 
 function ItemsStackNavigator() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Items" component={ExampleScreen} />
+      <Stack.Screen name="Items" component={PostsScreen} />
     </Stack.Navigator>
   );
 }
