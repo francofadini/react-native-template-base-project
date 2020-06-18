@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { StyleSheet } from 'react-native';
 import { View } from 'components/View';
 import { Text } from 'components/Text';
-import { Button } from 'components/Button';
-import strings from 'constants/strings';
 import PostsPresenter, { PostsView } from 'screens/posts/PostsPresenter';
 import PostsConfigurator from 'screens/posts/PostsConfigurator';
 import { ListView } from '@ant-design/react-native';
@@ -47,6 +45,7 @@ export const PostsScreen: React.FC<PostsScreenProps> = (props) => {
     // Architecture tools
     const presenter: PostsPresenter = PostsConfigurator.buildPresenter(view);
     
+    // UI
     const renderItem = (item: any) => {
         return (
           <View style={{ padding: 10 }}>
