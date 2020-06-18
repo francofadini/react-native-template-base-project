@@ -1,5 +1,6 @@
 import { PostsService } from "services/posts/posts.service"
 import { Post } from "models/post.model"
+import { LICPostProps } from 'components/LICPost';
 
 export interface PostsView {
 
@@ -21,10 +22,19 @@ export default class PostsPresenter {
         
         this.postsService.getAllPosts()
         .then((posts) => {
-            let postViewModels = posts.map((post) => ({title: post.name, imageURL: post.photoURL}))
+            let postViewModels = posts.map((post) => this.mapPostToViewModel(post))
             startFetch(postViewModels, 999999)
         }).catch((error) => {
             abortFetch()
         })
+    }
+
+    private mapPostToViewModel(post: Post): LICPostProps {
+        return {
+            key: '',
+            title: post.name,
+            imageURL: post.photoURL,
+            onPress: ()=>{}
+        }
     }
 }
