@@ -6,6 +6,7 @@ import { Button } from 'components/Button';
 import strings from 'constants/strings';
 import PostsPresenter, { PostsView } from 'screens/posts/PostsPresenter';
 import PostsConfigurator from 'screens/posts/PostsConfigurator';
+import { ListView } from '@ant-design/react-native';
 
 interface PostsScreenProps {
 
@@ -40,25 +41,25 @@ export const PostsScreen: React.FC<PostsScreenProps> = (props) => {
 
     // View Interface
     const view: PostsView  =  {
-        increaseCount() {
-            setCount(count + 1)
-        }
+        
     }
 
     // Architecture tools
     const presenter: PostsPresenter = PostsConfigurator.buildPresenter(view);
+    
+    const renderItem = (item: any) => {
+        return (
+          <View style={{ padding: 10 }}>
+            <Text>{item.name}</Text>
+          </View>
+        );
+    };
 
     // Component Render
     return (
-        <View style={styles.root}>
-        <Text>{strings.exampleScreen.title}</Text>
-        <Text>{strings.exampleScreen.counterLabel} : {count}</Text>
-        <Button
-        style={styles.button}
-        type={'primary'} 
-        onPress={presenter.onMainButtonPressed}>
-            {strings.exampleScreen.upButtonLabel} !
-        </Button>
-        </View>
+        <ListView
+            onFetch={presenter.onListFetch}
+            keyExtractor={(item, index) => "index-" + index}
+            renderItem={renderItem}/>
     );
 }
