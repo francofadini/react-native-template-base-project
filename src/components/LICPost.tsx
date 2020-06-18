@@ -4,7 +4,7 @@ import { LICProps, ListItemComplex } from 'components/ListItemComplex';
 import { Text } from 'components/Text';
 import { View } from 'components/View';
 
-export const renderLICPost = ({item}: {item: LICPostProps}) => {
+export const renderLICPost = (item: LICPostProps) => {
   return (
     <LICPost
       {...item}/>
@@ -41,16 +41,21 @@ export const LICPost: React.FC<LICPostProps> = (props) => {
   return(
     <ListItemComplex
       {...props}
+      style={styles.container}
+      leftComponent={props.imageURL ? imageComponent: undefined}
       topComponent={contentComponent}
-      topRightComponent={props.imageURL ? imageComponent: undefined}
-      topRightStyle={styles.topRight}
-      bottomRightStyle={styles.bottomRight}/>
+      showRightIcon={true}/>
   )
 }
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: 'white',
+    margin: 10,
+    borderRadius: 8
+  },
   contentWithImage: {
-    marginRight: 10,
+    marginLeft: 10,
   },
   imageStyle: {
     height: 80, 

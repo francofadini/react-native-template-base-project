@@ -21,7 +21,8 @@ export default class PostsPresenter {
         
         this.postsService.getAllPosts()
         .then((posts) => {
-            startFetch(posts, 999999)
+            let postViewModels = posts.map((post) => ({title: post.name, imageURL: post.photoURL}))
+            startFetch(postViewModels, 999999)
         }).catch((error) => {
             abortFetch()
         })

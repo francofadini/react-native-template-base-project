@@ -5,21 +5,11 @@ import { Text } from 'components/Text';
 import PostsPresenter, { PostsView } from 'screens/posts/PostsPresenter';
 import PostsConfigurator from 'screens/posts/PostsConfigurator';
 import { ListView } from '@ant-design/react-native';
+import { renderLICPost } from 'components/LICPost';
 
 interface PostsScreenProps {
 
 }
-
-const styles = StyleSheet.create({
-    root : {
-      flex: 1, 
-      justifyContent: 'center', 
-      alignItems: 'center'
-    },
-    button: {
-      marginTop: 50
-    }
-})
 
 export const PostsScreen: React.FC<PostsScreenProps> = (props) => {
 
@@ -44,21 +34,24 @@ export const PostsScreen: React.FC<PostsScreenProps> = (props) => {
 
     // Architecture tools
     const presenter: PostsPresenter = PostsConfigurator.buildPresenter(view);
-    
-    // UI
-    const renderItem = (item: any) => {
-        return (
-          <View style={{ padding: 10 }}>
-            <Text>{item.name}</Text>
-          </View>
-        );
-    };
 
     // Component Render
     return (
         <ListView
             onFetch={presenter.onListFetch}
             keyExtractor={(item, index) => "index-" + index}
-            renderItem={renderItem}/>
+            renderItem={renderLICPost}/>
     );
 }
+
+
+const styles = StyleSheet.create({
+  root : {
+    flex: 1, 
+    justifyContent: 'center', 
+    alignItems: 'center'
+  },
+  button: {
+    marginTop: 50
+  }
+})
