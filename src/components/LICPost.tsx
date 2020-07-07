@@ -4,23 +4,24 @@ import { LICProps, ListItemComplex } from 'components/ListItemComplex';
 import { Text } from 'components/Text';
 import { View } from 'components/View';
 
-export const renderLICPost = (item: LICPostProps) => {
+export const renderLICPost = (props: LICPostProps) => {
   return (
     <LICPost
-      {...item}/>
+      {...props}/>
   )
 }
 
 export interface LICPostProps extends LICProps {
   key: string,
   title: string,
+  body: string,
   imageURL: string,
   onPress: (id: string)=>void,
 }
 
 export const LICPost: React.FC<LICPostProps> = (props) => {
   
-  const contentComponent = (
+  const titleComponent = (
     <View
       style={props.imageURL ? styles.contentWithImage : null}>
        <Text
@@ -31,6 +32,16 @@ export const LICPost: React.FC<LICPostProps> = (props) => {
     </View>
   )
 
+  const bodyComponent = (
+    <View
+      style={props.imageURL ? styles.contentWithImage : null}>
+       <Text
+       style={styles.body}
+       numberOfLines={5}>
+        {props.body}
+      </Text>
+    </View>
+  )
 
   const imageComponent = (
     <Image
@@ -43,8 +54,8 @@ export const LICPost: React.FC<LICPostProps> = (props) => {
       {...props}
       style={styles.container}
       leftComponent={props.imageURL ? imageComponent: undefined}
-      topComponent={contentComponent}
-      showRightIcon={true}/>
+      topComponent={titleComponent}
+      bottomComponent={bodyComponent}/>
   )
 }
 
@@ -68,5 +79,8 @@ const styles = StyleSheet.create({
   },
   bottomRight: {
     flex: 0
+  },
+  body: {
+    textAlign: 'auto'
   }
 });

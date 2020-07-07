@@ -31,9 +31,10 @@ export default class PostsPresenter {
 
     private mapPostToViewModel(post: Post): LICPostProps {
         return {
-            key: '',
-            title: post.name,
-            imageURL: post.photoURL,
+            key: '1',
+            title: post.title,
+            body: post.body,
+            imageURL: post.imageURL,
             onPress: ()=>{}
         }
     }

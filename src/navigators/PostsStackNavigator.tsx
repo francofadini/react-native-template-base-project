@@ -4,12 +4,12 @@ import { PostsScreen } from 'screens/posts/PostsScreen';
 
 const Stack = createStackNavigator();
 
-function ItemsStackNavigator() {
+function PostsStackNavigator() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Items" component={PostsScreen} />
+      <Stack.Screen name="Posts" component={PostsScreen} />
     </Stack.Navigator>
   );
 }
 
-export default ItemsStackNavigator;
+export default PostsStackNavigator;

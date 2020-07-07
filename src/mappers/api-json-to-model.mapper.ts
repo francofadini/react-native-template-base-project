@@ -4,8 +4,9 @@ export default class APIJSONToModelMapper {
 
   static postFromJSON (json: any): Post {
     return new Post(
-      json.name,
-      json.photoURL
+      json.title,
+      json.body,
+      json.imageURL,
     )
   }
 }

@@ -1,9 +1,11 @@
 export class Post {
-  public name: string
-  public photoURL: string
+  public title: string
+  public body: string
+  public imageURL: string
 
-  constructor (name: string, photoURL: string) {
-    this.name = name
-    this.photoURL = photoURL
+  constructor (title: string, body: string, imageURL: string) {
+    this.title = title
+    this.body = body
+    this.imageURL = imageURL
   }
 }

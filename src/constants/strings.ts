@@ -23,8 +23,8 @@ const strings = new LocalizedStrings({
       counterLabel: "Contador",
       upButtonLabel: "Agregar"
     },
-    itemsScreen: {
-      title: "Items"
+    postsScreen: {
+      title: "Posts"
     },
     accountScreen: {
       title: "Mi Cuenta"
