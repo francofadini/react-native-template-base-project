@@ -1,0 +1,8 @@
+{
+  "name": "react-native-template-base-project",
+  "version": "0.0.1",
+  "description": "React Native Template",
+  "repository": "git@github.com:francofadini/react-native-template-base-project.git",
+  "author": "Franco Fadini <francofadini@gmail.com>",
+  "license": "MIT"
+}
