@@ -70,6 +70,7 @@
 		48AEDD75F217D4363CCABB66 /* libPods-RNBaseProject-RNBaseProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNBaseProject-RNBaseProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BB5A864298B0D3351153228 /* Pods-RNBaseProject-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNBaseProject-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-RNBaseProject-tvOS/Pods-RNBaseProject-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		57F1514C91324ADF9CE7C02D /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		6DB3C9CC251BDB3D0028E445 /* RNBaseProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNBaseProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		6FF7EEBE378043C799AB1904 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		717546189B2F4D13B6E15C07 /* antfill.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = antfill.ttf; path = "../node_modules/@ant-design/icons-react-native/fonts/antfill.ttf"; sourceTree = "<group>"; };
 		7228CA879D4A78EDAFEEA41B /* Pods-RNBaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNBaseProject.debug.xcconfig"; path = "Target Support Files/Pods-RNBaseProject/Pods-RNBaseProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +153,7 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				6DB3C9CC251BDB3D0028E445 /* RNBaseProject-Bridging-Header.h */,
 			);
 			name = RNBaseProject;
 			sourceTree = "<group>";
@@ -332,7 +334,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1140;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
@@ -340,7 +342,7 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = WTWN3WUS6Q;
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1140;
 						ProvisioningStyle = Automatic;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
@@ -799,6 +801,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ffadini.rnbaseproject;
 				PRODUCT_NAME = RNBaseProject;
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "RNBaseProject-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -825,6 +828,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ffadini.rnbaseproject;
 				PRODUCT_NAME = RNBaseProject;
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "RNBaseProject-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
