@@ -28,7 +28,7 @@ export  default  {
   fill_tap : '#dddddd' ,                             // component default background _ press
   fill_disabled : '#dddddd' ,                        // General invalidation background
   fill_mask : 'rgba(0, 0, 0, .4)' ,               // mask background
-  color_icon_base : ' #cccccc ' ,                      // Background of many small icons, such as some small dots, plus and minus signs
+  color_icon_base : ' #cccccc' ,                      // Background of many small icons, such as some small dots, plus and minus signs
   fill_grey: '#f7f7f7',
 
   // Transparency
