@@ -19,6 +19,7 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* RNBaseProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RNBaseProjectTests.m */; };
 		52C4E7D1AF51D3319354FD26 /* libPods-RNBaseProject-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EE37C0E5410610F71BF971 /* libPods-RNBaseProject-tvOS.a */; };
+		6D30DA47251D12C800965981 /* AppCenter-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D30DA46251D12C800965981 /* AppCenter-Config.plist */; };
 		AAF3922A57983101F203816E /* libPods-RNBaseProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 718B4BAD9B2BC178BB6EBF28 /* libPods-RNBaseProject.a */; };
 		AD275A22792544BE9BA28AD8 /* antfill.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 717546189B2F4D13B6E15C07 /* antfill.ttf */; };
 		D0C84684716F92F2F7DD272E /* libPods-RNBaseProject-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 580CCE5D154B8C99740EF6C3 /* libPods-RNBaseProject-tvOSTests.a */; };
@@ -69,6 +70,7 @@
 		53E8AF85BDD3CFEED7A043CE /* Pods-RNBaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNBaseProject.debug.xcconfig"; path = "Target Support Files/Pods-RNBaseProject/Pods-RNBaseProject.debug.xcconfig"; sourceTree = "<group>"; };
 		57F1514C91324ADF9CE7C02D /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		580CCE5D154B8C99740EF6C3 /* libPods-RNBaseProject-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNBaseProject-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D30DA46251D12C800965981 /* AppCenter-Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "AppCenter-Config.plist"; path = "../AppCenter-Config.plist"; sourceTree = "<group>"; };
 		6DB3C9CC251BDB3D0028E445 /* RNBaseProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNBaseProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		6FF7EEBE378043C799AB1904 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		717546189B2F4D13B6E15C07 /* antfill.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = antfill.ttf; path = "../node_modules/@ant-design/icons-react-native/fonts/antfill.ttf"; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 		13B07FAE1A68108700A75B9A /* RNBaseProject */ = {
 			isa = PBXGroup;
 			children = (
+				6D30DA46251D12C800965981 /* AppCenter-Config.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -391,6 +394,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				6D30DA47251D12C800965981 /* AppCenter-Config.plist in Resources */,
 				AD275A22792544BE9BA28AD8 /* antfill.ttf in Resources */,
 				29E4D93AB77A4CDA95F5CBCC /* antoutline.ttf in Resources */,
 			);
