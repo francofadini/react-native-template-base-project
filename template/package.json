@@ -7,7 +7,8 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "generate": "node ./src/tools/generator/generate.js"
   },
   "dependencies": {
     "@ant-design/react-native": "^3.3.0",
@@ -46,6 +47,7 @@
     "babel-jest": "^24.9.0",
     "babel-plugin-module-resolver": "^4.0.0",
     "eslint": "^6.5.1",
+    "generate-template-files": "^3.0.0",
     "jest": "^25.1.0",
     "metro-react-native-babel-preset": "^0.59.0",
     "prettier": "^2.0.2",

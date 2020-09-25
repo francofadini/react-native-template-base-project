@@ -7,6 +7,7 @@
 3. run '`yarn ios` or `yarn android` to run the app.
 4. Create `.env` with all the variables found [here](./src/tools/env/env-tool.ts)
 4. Update env variables preffix on [.env](./.env) and [here](./appcenter-pre-build.sh)
+5. Update signin configuration for iOS
 
 ### Recomendations
 
