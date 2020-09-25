@@ -12,9 +12,19 @@ generateTemplateFiles([
       path: './src/screens/__ModelPrural__(camelCase)',
       pathAndFileNameDefaultCase: CaseConverterEnum.PascalCase,
       overwrite: true,
+    }
+  },
+  {
+    option: 'Create simple screen',
+    defaultCase: CaseConverterEnum.PascalCase,
+    entry: {
+      folderPath: './src/tools/generator/templates/simple-screen/',
     },
-    onComplete: (results) => {
-      console.log('Done! 🎉. Take a loook to the results:', results);
-    },
+    stringReplacers: [{ question: 'Insert screen name', slot: '__ScreenName__' }],
+    output: {
+      path: './src/screens/__ScreenName__(camelCase)',
+      pathAndFileNameDefaultCase: CaseConverterEnum.PascalCase,
+      overwrite: true,
+    }
   },
 ]);
