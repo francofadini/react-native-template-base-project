@@ -25,6 +25,7 @@ module.exports = {
           models: './src/models',
           mappers: './src/mappers',
           tools: './src/tools',
+          assets: './src/assets',
         },
       },
     ],

@@ -18,6 +18,13 @@ const strings = new LocalizedStrings({
       backspaceLabel: 'Retroceso',
       cancelKeyboardLabel: 'Cancelar Teclado',
     },
+    alert: {
+      cancelLabel: "Cancelar",
+      okLabel: "OK"
+    },
+    qrScannerScreen: {
+      title: "Escanear QR"
+    },
     exampleScreen: {
       title: "Pantalla Ejemplo",
       counterLabel: "Contador",
