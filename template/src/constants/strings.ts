@@ -35,7 +35,15 @@ const strings = new LocalizedStrings({
     },
     accountScreen: {
       title: "Mi Cuenta"
-    }
+    },
+    profileScreen: {
+      title: "Perfil",
+      logout: "Cerrar Sesión",
+      errors: {
+        profileErrorTitle: "Error",
+        profileErrorMessage: "Ocurrió un problema al intentar obtener los datos del usuario"
+      }
+    },
   }
 })
 

@@ -5,6 +5,7 @@ const colors = ({
   separator: '#949494',
   grayDark: '#999999',
   white: '#fff',
+  red: 'red',
 })
 
 export default colors;
