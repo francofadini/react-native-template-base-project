@@ -5,10 +5,11 @@
 1. Run `yarn install` for installing all the dependencies.
 2. Run `cd ios && pod install & cd ..`
 3. run '`yarn ios` or `yarn android` to run the app.
-4. Create `.env` with all the variables found [here](./src/tools/env/env-tool.ts)
-4. Update env variables preffix on [.env](./.env) and [here](./appcenter-pre-build.sh)
-5. Update Auth0 domain on [android manifest](./android/app/src/main/AndroidManifest.xml)
-6. Update signin configuration for iOS
+4. Create `.env` with all the variables found [here](./src/tools/env/env-tool.ts).
+4. Update env variables preffix on [.env](./.env) and [here](./appcenter-pre-build.sh).
+5. Update Auth0 domain on [android manifest](./android/app/src/main/AndroidManifest.xml).
+6. Update signing configuration for iOS.
+7. Add signing keys for android. 
 
 ### Recomendations
 
