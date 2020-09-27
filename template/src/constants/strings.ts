@@ -36,6 +36,19 @@ const strings = new LocalizedStrings({
     accountScreen: {
       title: "Mi Cuenta"
     },
+    privateContentScreen: {
+      message: "Debes ingresar a tu cuenta para ver esta sección",
+      loginButtonTitle: "Acceder",
+      signUpTitle: "Crear Cuenta",
+      loadingMessage: "Cargando...",
+      authPermissionTitle: "Permisos de Autenticación",
+      authPermissionMessage: "Te pediremos permiso para verificar tu cuenta. Por favor haz click en 'Continuar'",
+      authPermissionButtonLabel: "Entendido",
+      errors: {
+        genericLoginTitle: "Error de autenticación",
+        genericLoginMessage: "Ocurrió un problema al intentar autenticarse"
+      }
+    },
     profileScreen: {
       title: "Perfil",
       logout: "Cerrar Sesión",
