@@ -2,6 +2,7 @@
 
 ### Steps
 
+0. Run `git init && git add . && git commit -m "Innitial commit from m2gen template"` in order to init a repo
 1. Run `yarn install` for installing all the dependencies.
 2. Run `cd ios && pod install & cd ..`
 3. run '`yarn ios` or `yarn android` to run the app.
