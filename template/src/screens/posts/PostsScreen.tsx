@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet } from 'react-native';
-import { View } from 'components/View';
-import { Text } from 'components/Text';
 import PostsPresenter, { PostsView } from 'screens/posts/PostsPresenter';
 import PostsConfigurator from 'screens/posts/PostsConfigurator';
 import { ListView } from '@ant-design/react-native';
 import { renderLICPost } from 'components/LICPost';
+import { ImageLabelView } from 'components/ImageLabelView';
+import { iconLoading } from 'assets';
+import strings from 'constants/strings';
 
 interface PostsScreenProps {
 
@@ -13,19 +14,13 @@ interface PostsScreenProps {
 
 export const PostsScreen: React.FC<PostsScreenProps> = (props) => {
 
-    // Lifecycle Setup
+    // Hooks
     useEffect(() => {componentDidMount()},[])
     useEffect(() => {return () => {componentWillUnmount()}}, []);
-    useEffect(() => {onChildrenUpdate()}, [props.children]);
 
     // Component Lifecycle
     const componentDidMount = () => {}
     const componentWillUnmount = () => {}
-    const onChildrenUpdate = () => {}
-
-
-    // Component State
-    const [count, setCount] = useState(0);
 
     // View Interface
     const view: PostsView  =  {
@@ -40,7 +35,12 @@ export const PostsScreen: React.FC<PostsScreenProps> = (props) => {
         <ListView
             onFetch={presenter.onListFetch}
             keyExtractor={(item, index) => "index-" + index}
-            renderItem={renderLICPost}/>
+            renderItem={renderLICPost}
+            paginationAllLoadedView={()=><></>}
+            paginationFetchingView={()=>
+              <ImageLabelView
+                imageSource={iconLoading}
+                label={strings.postsScreen.loadingMessage}/>}/>
     );
 }
 
@@ -50,8 +50,5 @@ const styles = StyleSheet.create({
     flex: 1, 
     justifyContent: 'center', 
     alignItems: 'center'
-  },
-  button: {
-    marginTop: 50
   }
 })

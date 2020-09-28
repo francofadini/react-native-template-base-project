@@ -31,7 +31,8 @@ const strings = new LocalizedStrings({
       upButtonLabel: "Agregar"
     },
     postsScreen: {
-      title: "Posts"
+      title: "Posts",
+      loadingMessage: "Cargando...",
     },
     accountScreen: {
       title: "Mi Cuenta"
