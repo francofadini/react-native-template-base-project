@@ -31,7 +31,7 @@ export default class __ModelPrural__Presenter {
 
     private map__ModelSingular__ToViewModel(__ModelSingular__(camelCase): __ModelSingular__): LIC__ModelSingular__Props {
         return {
-            key: '1',
+            key: __ModelSingular__(camelCase).id,
             title: __ModelSingular__(camelCase).title,
             body: __ModelSingular__(camelCase).body,
             imageURL: __ModelSingular__(camelCase).imageURL,

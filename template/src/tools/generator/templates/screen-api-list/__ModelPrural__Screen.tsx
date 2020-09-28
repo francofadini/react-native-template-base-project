@@ -11,7 +11,7 @@ interface __ModelPrural__ScreenProps {
 
 export const __ModelPrural__Screen: React.FC<__ModelPrural__ScreenProps> = (props) => {
 
-    // Lifecycle Setup
+    // Hooks
     useEffect(() => {componentDidMount()},[])
     useEffect(() => {return () => {componentWillUnmount()}}, []);
     useEffect(() => {onChildrenUpdate()}, [props.children]);
@@ -48,8 +48,5 @@ const styles = StyleSheet.create({
     flex: 1, 
     justifyContent: 'center', 
     alignItems: 'center'
-  },
-  button: {
-    marginTop: 50
   }
 })
