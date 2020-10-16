@@ -45,16 +45,11 @@ buck-out/
 *.keystore
 !debug.keystore
 
-# fastlane
-#
-# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
-# screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://docs.fastlane.tools/best-practices/source-control/
-
-*/fastlane/report.xml
-*/fastlane/Preview.html
-*/fastlane/screenshots
+# Fastlane specific
+fastlane/*
+!fastlane/Fastfile
+!fastlane/Pluginfile
+!fastlane/allowd_ios_devices.txt
 
 # Bundle artifact
 *.jsbundle
@@ -64,3 +59,4 @@ buck-out/
 
 # Environment Variables
 .env
+.env.*

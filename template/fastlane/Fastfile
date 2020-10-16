@@ -1,0 +1,95 @@
+# ENV Needed
+# FASTLANE_APPCENTER_TESTING_KEY (Ex.  bbd0ecafdf49df9b30f1f4432eb71b2349343354)
+# FASTLANE_APPCENTER_OWNER  (Ex. Circuito-Gastronomico)
+# FASTLANE_TESTING_APP_NAME (Ex. CG-Testing-iOS)
+# FASTLANE_TESTING_APP_ID (Ex. co.made2.circuito.testing)
+# FASTLANE_MATCH_BRANCH = (Ex. circuito-gastronomico)
+# FASTLANE_IOS_PROJECT_NAME = (Ex. CircuitoGastronomico)
+# FASTLANE_PROD_APP_ID = (Ex. co.made2.circuito)
+
+
+platform :ios do
+
+  desc 'Build & Upload to AppCenter (iOS - Testing)'
+  lane :dist_testing do
+    
+    appcenter_fetch_devices(
+      api_token: ENV['FASTLANE_APPCENTER_TESTING_KEY'],
+      owner_name: ENV['FASTLANE_APPCENTER_OWNER'],
+      app_name: ENV['FASTLANE_TESTING_APP_NAME'],
+      destinations: "*",
+      devices_file: "./fastlane/allowed_ios_devices.txt"
+    )
+
+    git_add(path: "./fastlane/allowed_ios_devices.txt")
+
+    git_commit(path: ["./fastlane/allowed_ios_devices.txt"], 
+               message: "Update allowed iOS devices list", 
+               allow_nothing_to_commit: true)
+
+    register_devices(
+      username: "stores.made2@gmail.com",
+      devices_file: "./fastlane/allowed_ios_devices.txt"
+    )
+
+    sync_code_signing(type: "adhoc",
+          app_identifier: ENV['FASTLANE_TESTING_APP_ID'],
+          force_for_new_devices: true,
+          username: "stores.made2@gmail.com",
+          git_url: "https://bitbucket.org/made2-products/m2-match-certificates.git",
+          git_branch: ENV['FASTLANE_MATCH_BRANCH'],
+          platform: "ios")
+
+    increment_build_number(build_number: number_of_commits,
+                           xcodeproj: "./ios/"ENV['FASTLANE_IOS_PROJECT_NAME']".xcodeproj")
+    
+    commit_version_bump(xcodeproj: "./ios/"ENV['FASTLANE_IOS_PROJECT_NAME']".xcodeproj")
+    add_git_tag(grouping: "build",
+                message: "testing",
+                prefix: "v")
+    push_to_git_remote
+    
+    build_app(
+      scheme: ENV['FASTLANE_IOS_PROJECT_NAME']'Testing', 
+      workspace: './ios/'ENV['FASTLANE_IOS_PROJECT_NAME']'.xcworkspace',
+      output_directory: "./fastlane/build/ios",
+      output_name: "ios-testing.ipa")
+    
+    appcenter_upload(
+      api_token: ENV['FASTLANE_APPCENTER_TESTING_KEY'],
+      owner_name: ENV['FASTLANE_APPCENTER_OWNER'],
+      owner_type: "organization", # Default is user - set to organization for appcenter organizations
+      app_name: ENV['FASTLANE_TESTING_APP_NAME'],
+      file: "./fastlane/build/ios/ios-testing.ipa",
+      notify_testers: true
+    )
+  end
+
+  desc 'Build & Upload to TestFlight (iOS - Production)'
+  lane :dist_store do
+    sync_code_signing(type: "appstore",
+    app_identifier: ENV['FASTLANE_PROD_APP_ID'],
+    force_for_new_devices: true,
+    username: "stores.made2@gmail.com",
+    git_url: "https://bitbucket.org/made2-products/m2-match-certificates.git",
+    git_branch: ENV['FASTLANE_MATCH_BRANCH'],
+    platform: "ios")
+    
+    build_app(
+      scheme: ENV['FASTLANE_IOS_PROJECT_NAME'], 
+      workspace: './ios/'ENV['FASTLANE_IOS_PROJECT_NAME']'.xcworkspace',
+      output_directory: "./fastlane/build/ios",
+      output_name: "ios-production.ipa")
+    
+    upload_to_testflight(
+      username: "stores.made2@gmail.com",
+      app_identifier: ENV['FASTLANE_PROD_APP_ID'],
+      ipa: "./fastlane/build/ios/ios-production.ipa"
+    )
+  end
+
+end
+
+platform :android do
+
+end
