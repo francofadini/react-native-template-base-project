@@ -1,4 +1,4 @@
-package com.rnbaseproject;
+package co.made2.base;
 
 import com.facebook.react.ReactActivity;
 import org.devio.rn.splashscreen.SplashScreen;

@@ -1,4 +1,4 @@
-package com.rnbaseproject;
+package co.made2.base;
 
 import android.content.Intent;
 import android.os.Bundle;

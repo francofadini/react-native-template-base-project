@@ -35,12 +35,12 @@ android_library(
 
 android_build_config(
     name = "build_config",
-    package = "com.rnbaseproject",
+    package = "co.made2.base",
 )
 
 android_resource(
     name = "res",
-    package = "com.rnbaseproject",
+    package = "co.made2.base",
     res = "src/main/res",
 )
 

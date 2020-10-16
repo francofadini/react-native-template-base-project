@@ -149,7 +149,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.rnbaseproject"
+        applicationId "co.made2.base"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
