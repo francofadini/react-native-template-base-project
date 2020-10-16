@@ -6,8 +6,6 @@
 3. run '`yarn ios` or `yarn android` to run the app.
 4. Update env variables preffix [here](./appcenter-pre-build.sh).
 4. Create `.env.testing` and `.env.production` files with all the variables found [here](./src/tools/env/env-tool.ts) and [here](./fastlane/Fastfile).
-5. Update testing Auth0 domain on [android manifest](./android/app/src/ftesting/AndroidManifest.xml).
-5. Update production Auth0 domain on [android manifest](./android/app/src/production/AndroidManifest.xml).
 6. Update signing configuration for iOS.
 7. Add signing keys for android.
 
