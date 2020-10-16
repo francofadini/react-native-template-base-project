@@ -3,6 +3,14 @@ apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.grad
 
 import com.android.build.OutputFile
 
+project.ext.envConfigFiles = [
+    production: ".env.production",
+    ftesting: ".env.testing"
+]
+
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+
 /**
  * The react.gradle file registers a task for each build variant (e.g. bundleDebugJsAndAssets
  * and bundleReleaseJsAndAssets).
@@ -123,10 +131,21 @@ def enableHermes = project.ext.react.get("enableHermes", false);
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
-
+    flavorDimensions "default"
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+    productFlavors {
+        production {
+            dimension "default"
+            resValue "string", "app_name", "Base Project"
+        }
+        ftesting {
+            dimension "default"
+            applicationIdSuffix '.testing'
+            resValue "string", "app_name", "Base Project (Testing)"
+        }
     }
 
     defaultConfig {
