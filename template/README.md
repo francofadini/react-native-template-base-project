@@ -32,7 +32,7 @@
 - productionRelease
 
 ### Running android via CLI
-`yarn android --variant=ftestingDebug --appIdSuffic=testing` or
+`yarn android --variant=ftestingDebug --appIdSuffix=testing` or
 `yarn android --variant=productionDebug`
 
 ## iOS Distribution
