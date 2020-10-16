@@ -24,7 +24,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6DFB39752539E04C00DD3BB9"
-               BuildableName = "RNBaseProjectTesting.app"
+               BuildableName = "RNBaseProject (Testing).app"
                BlueprintName = "RNBaseProjectTesting"
                ReferencedContainer = "container:RNBaseProject.xcodeproj">
             </BuildableReference>
@@ -68,7 +68,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6DFB39752539E04C00DD3BB9"
-            BuildableName = "RNBaseProjectTesting.app"
+            BuildableName = "RNBaseProject (Testing).app"
             BlueprintName = "RNBaseProjectTesting"
             ReferencedContainer = "container:RNBaseProject.xcodeproj">
          </BuildableReference>
@@ -85,7 +85,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6DFB39752539E04C00DD3BB9"
-            BuildableName = "RNBaseProjectTesting.app"
+            BuildableName = "RNBaseProject (Testing).app"
             BlueprintName = "RNBaseProjectTesting"
             ReferencedContainer = "container:RNBaseProject.xcodeproj">
          </BuildableReference>
