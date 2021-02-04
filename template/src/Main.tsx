@@ -1,25 +1,24 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import {StatusBar} from 'react-native';
+import { StatusBar } from 'react-native';
 import UIProvider from 'components/UIProvider';
 import RNTheme from 'constants/theme.rn';
 import SplashScreen from 'react-native-splash-screen';
 import { useEffect } from 'react';
 import AppModalsStackNavigator from 'navigators/AppModalsNavigator';
-import SessionProvider from 'components/SessionProvider';
-
+import SessionProvider from 'tools/session/session-provider.component';
 
 const App = () => {
-  useEffect(() => { 
+  useEffect(() => {
     setTimeout(() => SplashScreen.hide(), 1000);
-  }, [])
+  }, []);
 
   return (
     <SessionProvider>
       <UIProvider>
         <StatusBar barStyle="dark-content" />
         <NavigationContainer theme={RNTheme}>
-          <AppModalsStackNavigator/>
+          <AppModalsStackNavigator />
         </NavigationContainer>
       </UIProvider>
     </SessionProvider>

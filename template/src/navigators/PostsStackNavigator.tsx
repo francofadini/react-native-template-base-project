@@ -1,21 +1,21 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import { PostsScreen } from 'screens/posts/PostsScreen';
 import { DefaultNavigatorScreenOptions } from 'navigators/DefaultNavigatorScreenOptions';
 import strings from 'constants/strings';
+import { AllPostsFragment } from 'fragments/all-posts/all-posts.fragment';
 
 const Stack = createStackNavigator();
 
 function PostsStackNavigator() {
   return (
-    <Stack.Navigator
-      screenOptions={DefaultNavigatorScreenOptions}>
-      <Stack.Screen 
+    <Stack.Navigator screenOptions={DefaultNavigatorScreenOptions}>
+      <Stack.Screen
         name="Posts"
         options={{
-          title: strings.postsScreen.title
+          title: strings.postsScreen.title,
         }}
-        component={PostsScreen} />
+        component={AllPostsFragment}
+      />
     </Stack.Navigator>
   );
 }

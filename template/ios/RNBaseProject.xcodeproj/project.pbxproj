@@ -13,12 +13,10 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		29E4D93AB77A4CDA95F5CBCC /* antoutline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F11793DC3F224C8AADBB0953 /* antoutline.ttf */; };
-		6D30DA47251D12C800965981 /* AppCenter-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D30DA46251D12C800965981 /* AppCenter-Config.plist */; };
 		6DFB39792539E04C00DD3BB9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		6DFB397A2539E04C00DD3BB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		6DFB397E2539E04C00DD3BB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		6DFB397F2539E04C00DD3BB9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
-		6DFB39802539E04C00DD3BB9 /* AppCenter-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D30DA46251D12C800965981 /* AppCenter-Config.plist */; };
 		6DFB39812539E04C00DD3BB9 /* antfill.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 717546189B2F4D13B6E15C07 /* antfill.ttf */; };
 		6DFB39822539E04C00DD3BB9 /* antoutline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F11793DC3F224C8AADBB0953 /* antoutline.ttf */; };
 		AD275A22792544BE9BA28AD8 /* antfill.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 717546189B2F4D13B6E15C07 /* antfill.ttf */; };
@@ -52,7 +50,7 @@
 		54E2D83B5062E4100653D5C6 /* Pods-App-RNBaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-RNBaseProject.debug.xcconfig"; path = "Target Support Files/Pods-App-RNBaseProject/Pods-App-RNBaseProject.debug.xcconfig"; sourceTree = "<group>"; };
 		57F1514C91324ADF9CE7C02D /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		580CCE5D154B8C99740EF6C3 /* libPods-RNBaseProject-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNBaseProject-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D30DA46251D12C800965981 /* AppCenter-Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "AppCenter-Config.plist"; path = "../AppCenter-Config.plist"; sourceTree = "<group>"; };
+		6D2A34FC25CC65A90076414F /* AppCenter-Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "AppCenter-Config.plist"; path = "/Users/francomade2/Documents/made2/tools/base-projects/react-native-template-base-project/template/ios/AppCenter-Config.plist"; sourceTree = "<absolute>"; };
 		6DB3C9CC251BDB3D0028E445 /* RNBaseProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNBaseProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		6DFB39882539E04C00DD3BB9 /* RNBaseProject (Testing).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RNBaseProject (Testing).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DFB398A2539E13E00DD3BB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,7 +98,7 @@
 		13B07FAE1A68108700A75B9A /* RNBaseProject */ = {
 			isa = PBXGroup;
 			children = (
-				6D30DA46251D12C800965981 /* AppCenter-Config.plist */,
+				6D2A34FC25CC65A90076414F /* AppCenter-Config.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -301,7 +299,6 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				6D30DA47251D12C800965981 /* AppCenter-Config.plist in Resources */,
 				AD275A22792544BE9BA28AD8 /* antfill.ttf in Resources */,
 				29E4D93AB77A4CDA95F5CBCC /* antoutline.ttf in Resources */,
 			);
@@ -313,7 +310,6 @@
 			files = (
 				6DFB397E2539E04C00DD3BB9 /* Images.xcassets in Resources */,
 				6DFB397F2539E04C00DD3BB9 /* LaunchScreen.xib in Resources */,
-				6DFB39802539E04C00DD3BB9 /* AppCenter-Config.plist in Resources */,
 				6DFB39812539E04C00DD3BB9 /* antfill.ttf in Resources */,
 				6DFB39822539E04C00DD3BB9 /* antoutline.ttf in Resources */,
 			);

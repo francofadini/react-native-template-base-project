@@ -6,37 +6,35 @@ import { ImageSourcePropType, StyleSheet } from 'react-native';
 import colors from 'constants/colors';
 
 export interface ImageLabelViewProps {
-  imageSource: ImageSourcePropType
-  label: string
+  imageSource: ImageSourcePropType;
+  label: string;
 }
 
 export const ImageLabelView: React.FC<ImageLabelViewProps> = (props) => {
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={props.imageSource}/>
-      <Text style={styles.label}>
-          {props.label}
-      </Text>
+      <Image style={styles.image} source={props.imageSource} />
+      <Text style={styles.label}>{props.label}</Text>
     </View>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
-  container : {
+  container: {
     flex: 1,
-    justifyContent: 'center', 
+    justifyContent: 'center',
     alignItems: 'center',
-    margin: 40
+    margin: 40,
   },
   image: {
-      height: 50,
-      margin: 30,
-      resizeMode: 'contain'
+    height: 50,
+    margin: 30,
+    resizeMode: 'contain',
   },
   label: {
-      textAlign: 'center',
-      fontSize:20,
-      color: colors.primary,
-      fontWeight: 'bold'
+    textAlign: 'center',
+    fontSize: 20,
+    color: colors.primary,
+    fontWeight: 'bold',
   },
-})
+});

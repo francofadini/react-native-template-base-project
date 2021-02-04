@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/francomade2/Documents/made2/tools/base-projects/react-native-template-base-project/template/ios/AppCenter-Config.plist">
+   </FileRef>
+   <FileRef
       location = "group:RNBaseProject.xcodeproj">
    </FileRef>
    <FileRef
