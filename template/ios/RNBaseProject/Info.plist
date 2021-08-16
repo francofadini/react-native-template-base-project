@@ -54,10 +54,10 @@
     <string>$(PRODUCT_NAME) necesita acceso a la camara</string>
 
     <key>NSLocationWhenInUseUsageDescription</key>
-    <string>$(PRODUCT_NAME) necesita acceso a la localizacion</string>
+    <string>$(PRODUCT_NAME) necesita acceso a la localización</string>
 
     <key>NSPhotoLibraryUsageDescription</key>
-    <string>$(PRODUCT_NAME) necesita acceso a la libreria</string>
+    <string>$(PRODUCT_NAME) necesita acceso a la galería</string>
 
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
