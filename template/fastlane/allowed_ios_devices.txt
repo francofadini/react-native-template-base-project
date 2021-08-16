@@ -1,0 +1,4 @@
+Device ID	Device Name
+b700c38a3d8a9389c035c36680e4e75511ca9c5c	Agustín Campos - iPhone 6	ios
+00008101-001608de2e6a001e	Franco Fadini - iPhone 12	ios
+16a8dce2ea788ce91c33c19ba6b598d417508863	Franco Fadini - iPhone SE (1st generation)	ios

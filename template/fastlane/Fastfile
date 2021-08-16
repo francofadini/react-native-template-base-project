@@ -12,7 +12,7 @@ platform :ios do
 
   desc 'Build & Upload to AppCenter (iOS - Testing)'
   lane :dist_testing do
-    
+
     appcenter_fetch_devices(
       api_token: ENV['FASTLANE_APPCENTER_TESTING_KEY'],
       owner_name: ENV['FASTLANE_APPCENTER_OWNER'],
@@ -23,8 +23,8 @@ platform :ios do
 
     git_add(path: "./fastlane/allowed_ios_devices.txt")
 
-    git_commit(path: ["./fastlane/allowed_ios_devices.txt"], 
-               message: "Update allowed iOS devices list", 
+    git_commit(path: ["./fastlane/allowed_ios_devices.txt"],
+               message: "Update allowed iOS devices list",
                allow_nothing_to_commit: true)
 
     register_devices(
@@ -42,26 +42,26 @@ platform :ios do
 
     increment_build_number(build_number: number_of_commits,
                            xcodeproj: "./ios/"ENV['FASTLANE_IOS_PROJECT_NAME']".xcodeproj")
-    
+
     commit_version_bump(xcodeproj: "./ios/"ENV['FASTLANE_IOS_PROJECT_NAME']".xcodeproj")
     add_git_tag(grouping: "build",
                 message: "testing",
                 prefix: "v")
     push_to_git_remote
-    
+
     build_app(
-      scheme: ENV['FASTLANE_IOS_PROJECT_NAME']'Testing', 
+      scheme: ENV['FASTLANE_IOS_PROJECT_NAME']'Testing',
       workspace: './ios/'ENV['FASTLANE_IOS_PROJECT_NAME']'.xcworkspace',
       output_directory: "./fastlane/build/ios",
       output_name: "ios-testing.ipa")
-    
+
     appcenter_upload(
       api_token: ENV['FASTLANE_APPCENTER_TESTING_KEY'],
       owner_name: ENV['FASTLANE_APPCENTER_OWNER'],
       owner_type: "organization", # Default is user - set to organization for appcenter organizations
       app_name: ENV['FASTLANE_TESTING_APP_NAME'],
       file: "./fastlane/build/ios/ios-testing.ipa",
-      notify_testers: true
+      notify_testers: false
     )
   end
 
@@ -74,13 +74,13 @@ platform :ios do
     git_url: "https://bitbucket.org/made2-products/m2-match-certificates.git",
     git_branch: ENV['FASTLANE_MATCH_BRANCH'],
     platform: "ios")
-    
+
     build_app(
-      scheme: ENV['FASTLANE_IOS_PROJECT_NAME'], 
+      scheme: ENV['FASTLANE_IOS_PROJECT_NAME'],
       workspace: './ios/'ENV['FASTLANE_IOS_PROJECT_NAME']'.xcworkspace',
       output_directory: "./fastlane/build/ios",
       output_name: "ios-production.ipa")
-    
+
     upload_to_testflight(
       username: "stores.made2@gmail.com",
       app_identifier: ENV['FASTLANE_PROD_APP_ID'],
